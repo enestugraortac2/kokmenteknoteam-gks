@@ -1,0 +1,39 @@
+# ═══════════════════════════════════════════════════════════
+#  NeuroSense GKS — Raspberry Pi 5 Bağımlılıkları
+#  Python 3.11+ gerekli
+# ═══════════════════════════════════════════════════════════
+
+# --- Görüntü İşleme ---
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+
+# --- Yüz Tespiti (Göz Modülü) ---
+dlib>=19.24.0
+
+# --- Pose Tespiti (Motor Modülü) ---
+ultralytics>=8.1.0
+
+# --- Konuşma Tanıma (Ses Modülü) ---
+# faster-whisper: CTranslate2 tabanlı, Pi 5'te INT8 desteği
+faster-whisper>=0.10.0
+
+# --- NLP / Semantik Analiz ---
+sentence-transformers>=2.2.0
+
+# --- Raspberry Pi Kamera ---
+picamera2>=0.3.12
+
+# --- GPIO (Servo Kontrolü) ---
+gpiozero>=2.0.0
+RPi.GPIO>=0.7.1
+
+# --- LCD Ekran (ILI9341) ---
+adafruit-circuitpython-rgb-display>=3.11.3
+adafruit-circuitpython-busdevice>=5.2.6
+Pillow>=9.0.0
+
+# --- Sensörler (MAX30100 / I2C) ---
+smbus2>=0.4.3
+
+# --- Terminalde Zengin Tablo (Opsiyonel) ---
+rich>=13.0.0

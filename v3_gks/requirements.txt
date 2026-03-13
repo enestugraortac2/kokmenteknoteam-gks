@@ -1,0 +1,31 @@
+# ═══════════════════════════════════════════════════════════
+#  NeuroSense GKS v3 — Raspberry Pi 5 Bağımlılıkları
+#  Python 3.11+ gerekli
+# ═══════════════════════════════════════════════════════════
+
+# --- Görüntü İşleme ---
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+
+# --- Yüz/Göz Tespiti (Göz Modülü) ---
+# dlib kaldırıldı → OpenCV Haar Cascade (0MB ek — OpenCV dahili)
+# mediapipe kaldırıldı → ARM64'te pip wheel yok
+
+# --- Pose Tespiti (Motor Modülü) ---
+# ultralytics kaldırıldı → ONNX Runtime (~80MB vs ~350MB)
+onnxruntime>=1.16.0
+
+# --- Konuşma Tanıma (Ses Modülü) ---
+# faster-whisper: CTranslate2 tabanlı, Pi 5'te INT8 desteği
+faster-whisper>=0.10.0
+
+# --- NLP / Semantik Analiz ---
+# sentence-transformers kaldırıldı → stdlib difflib (0MB vs ~300MB)
+# Ek bağımlılık yok!
+
+# --- LCD Ekran (ILI9341) ---
+# adafruit paketleri system-site-packages'ten gelir
+# Pillow system paketinden gelir
+
+# --- Terminalde Zengin Tablo (Opsiyonel) ---
+rich>=13.0.0
